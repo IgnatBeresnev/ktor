@@ -6,12 +6,11 @@ package io.ktor.tests.server.plugins
 
 import io.ktor.http.*
 import io.ktor.server.application.*
-import io.ktor.server.plugins.*
+import io.ktor.server.plugins.cors.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import io.ktor.server.testing.*
 import kotlin.test.*
-import kotlin.time.*
 
 @Suppress("DEPRECATION")
 class CORSTest {

@@ -103,6 +103,11 @@ fun Project.configureJvm() {
                 "Implementation-Title" to name,
                 "Implementation-Version" to configuredVersion
             )
+            val name = (if (project.name.startsWith("ktor-")) "io.${project.name}" else "io.ktor.${project.name}")
+                .replace('-', '.')
+                .replace("default.headers", "defaultheaders")
+                .replace("double.receive", "doublereceive")
+            attributes("Automatic-Module-Name" to name)
         }
     }
 }
